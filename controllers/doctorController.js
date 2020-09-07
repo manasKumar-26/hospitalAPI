@@ -1,5 +1,5 @@
 const Doc=require('../models/doctor');
-const jwt=require('jsonwebtoken');
+//create new doctor
 module.exports.register=async function(req,res){
     let doctor=await Doc.findOne({email:req.body.email})
     if(doctor){
@@ -19,6 +19,7 @@ module.exports.register=async function(req,res){
         })
     })
 };
+//authorize a doctor
 module.exports.createSession=async function(req,res){
     try{
         let doc=await Doc.findOne({email:req.body.email});

@@ -3,6 +3,7 @@ const port=8000;
 const app=express();
 const db=require('./config/mongoose');
 const doc=require('./models/doctor');
+//Passport and startegies
 const passport=require('passport');
 const passportJWT=require('./config/passportJWT');
 app.use(express.urlencoded());
